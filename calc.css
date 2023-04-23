@@ -1,0 +1,66 @@
+a{
+
+    text-decoration: none !important;
+
+}
+
+.pTagElementWhite{
+    color: white;
+}
+
+.dark-mode{
+
+    background-color: black !important;
+    color: white !important;
+
+}
+
+.largeDiv{
+
+    height: 600px;
+    width: 500px !important;
+    /* margin-top: 10rem !important; */
+
+}
+
+.firstInput{
+
+    height: 50px;
+    overflow: auto;
+    overflow-wrap: break-word;
+
+}
+
+.secondInput{
+
+    height: 50px;
+    overflow: auto;
+    overflow-wrap: break-word;
+
+}
+
+.btn-customColor{
+
+    background-color: #c7c7c7 !important;
+    border-color: #c7c7c7 !important;
+
+}
+
+.btn-customColorNumber{
+
+    border-color: #c7c7c7 !important;
+
+}
+
+.btn-customColorResult{
+
+    background-color: #ff7733 !important;
+    border-color: #ff7733 !important;
+
+}
+
+.row-width{
+
+    height: 20% !important;
+
+}

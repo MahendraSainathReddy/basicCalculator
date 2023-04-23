@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calcunova.com</title>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="icon" href="https://i.ibb.co/tpyq764/image.png">
+    <script src="calc.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="h1 text-center mt-2 text-decoration-underline">Calculations Made Easy, Anytime, Anywhere</h1>
+        <h4 class="h4 text-center mt-3">No More Math Woes – Our Calculator Website Makes Math Simple and Accessible, Wherever You Are!</h4>
+        <div class="Container text-center mt-4">
+            <p class="fs-5 d-inline" id="darkLightMode">
+                Try the New Dark mode, Illuminate Your Interface
+            </p>
+            <a onclick="changeMode()">
+                <i id="darkModeButton" class="bi bi-toggle-off fs-5"></i>
+            </a>
+        </div>
+    </div>
+    <div class="container mt-4 largeDiv">
+        <div id="firstDiv" class="container firstInput border border-bottom-0 rounded-top border-dark">
+            <p id="firstInput" class="p-0 m-0 fs-5 float-end"></p>
+        </div>
+        <div id="secondDiv" class="container secondInput border border-top-0 rounded-bottom border-dark">
+            <p id="secondInput" class="p-0 m-0 fs-5 float-end"></p>
+        </div>
+        <div class="row row-width mt-3">
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100 display-1">
+                    <p class="fs-3 m-0" onclick="clearAll()">C</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100" onclick="inputCharacter('%')">
+                    <p class="fs-3 m-0">%</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100" onclick="deleteLastInput()">
+                    <i class="bi bi-backspace fs-3"></i>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100" onclick="inputCharacter('/')">
+                    <p class="fs-3 m-0">/</p>
+                </button>
+            </div>
+        </div>
+        <div class="row row-width">
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('7')">
+                    <p class="fs-3 m-0 p-customColorNumber">7</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('8')">
+                    <p class="fs-3 m-0 p-customColorNumber">8</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('9')">
+                    <p class="fs-3 m-0 p-customColorNumber">9</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100" onclick="inputCharacter('*')">
+                    <p class="fs-3 m-0">x</p>
+                </button>
+            </div>
+        </div>
+        <div class="row row-width">
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('4')">
+                    <p class="fs-3 m-0 p-customColorNumber">4</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('5')">
+                    <p class="fs-3 m-0 p-customColorNumber">5</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('6')">
+                    <p class="fs-3 m-0 p-customColorNumber">6</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100" onclick="inputCharacter('-')">
+                    <p class="fs-3 m-0">-</p>
+                </button>
+            </div>
+        </div>
+        <div class="row row-width">
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('1')">
+                    <p class="fs-3 m-0 p-customColorNumber">1</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('2')">
+                    <p class="fs-3 m-0 p-customColorNumber">2</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('3')">
+                    <p class="fs-3 m-0 p-customColorNumber">3</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColor rounded-circle h-100 w-100" onclick="inputCharacter('+')">
+                    <p class="fs-3 m-0">+</p>
+                </button>
+            </div>
+        </div>
+        <div class="row row-width">
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('00')">
+                    <p class="fs-3 m-0 p-customColorNumber">00</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('0')">
+                    <p class="fs-3 m-0 p-customColorNumber">0</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorNumber rounded-circle h-100 w-100" onclick="inputCharacter('.')">
+                    <p class="fs-3 m-0 p-customColorNumber">.</p>
+                </button>
+            </div>
+            <div class="col p-1">
+                <button class="btn btn-customColorResult rounded-circle h-100 w-100" onclick="calc()">
+                    <p class="fs-3 m-0 text-white">=</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
